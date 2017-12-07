@@ -4,7 +4,7 @@ pipeline {
         string(name: 'Branch', defaultValue: 'default', description: 'select which branch you want to select')
         booleanParam(name: 'Rebuild_Database' , defaultValue: true, description: 'Should we rebuild the database')
         booleanParam(name: 'Deploy' , defaultValue: true, description: 'Should we Deploy the application')
-        choice(name: 'Environment' , choice: 'Integration', description: 'used for posgress.sh and code deployment')
+        choice(name: 'Environment' , choices: 'Integration', description: 'used for posgress.sh and code deployment')
     }
     stages {
         stage('Example') {
